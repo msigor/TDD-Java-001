@@ -9,7 +9,7 @@ public class Relogio {
         this.segundos = segundos;
     }
 
-    public Integer obterHorario() {
+    public String obterHorario() {
         return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
 }
