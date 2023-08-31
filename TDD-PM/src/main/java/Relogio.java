@@ -3,6 +3,10 @@ public class Relogio {
     private int minutos;
     private int segundos;
 
+    private int horaInicioIntervalo;
+    private int minutoInicioIntervalo;
+    private int segundoInicioIntervalo;
+
     public void programarHorario(int horas, int minutos, int segundos) {
         this.horas = horas;
         this.minutos = minutos;
@@ -29,7 +33,6 @@ public class Relogio {
         int minutosDecorridos = minutos - minutoInicioIntervalo;
         int segundosDecorridos = segundos - segundoInicioIntervalo;
 
-        horas = minutos = segundos = 0; // Reiniciar o relógio
 
         // Ajustar para lidar com subtrações negativas
         if (segundosDecorridos < 0) {
