@@ -10,4 +10,12 @@ public class RelogioTest {
 
         assertEquals("10:30:00", relogio.obterHorario());
     }
+    @Test
+    public void testReiniciarMeiaNoite() {
+        Relogio relogio = new Relogio();
+        relogio.reiniciarMeiaNoite();
+
+        assertEquals("00:00:00", relogio.obterHorario());
+    }
+
 }
