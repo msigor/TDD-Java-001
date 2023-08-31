@@ -57,8 +57,17 @@ public class Relogio {
     }
 
     public void atualizarHorarioPassagemTempo(int horas, int minutos, int segundos) {
-        this.horas += minutos;  // Erro: somando minutos em horas
-        this.minutos += segundos;  // Erro: somando segundos em minutos
-        this.segundos += horas;  // Erro: somando horas em segundos
+        this.horas += horas;
+        this.minutos += minutos;
+        this.segundos += segundos;
+
+        // Ajustar valores para garantir que estejam dentro dos limites corretos
+        this.minutos += this.segundos / 60;
+        this.segundos %= 60;
+
+        this.horas += this.minutos / 60;
+        this.minutos %= 60;
+
+        this.horas %= 24;
     }
 }
