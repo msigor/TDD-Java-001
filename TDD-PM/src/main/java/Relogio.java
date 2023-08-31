@@ -53,6 +53,6 @@ public class Relogio {
     }
 
     public String obterHorarioFormato24h() {
-        return String.format("%02d:%02d:%02d", minutos, horas, segundos);
+        return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
 }
