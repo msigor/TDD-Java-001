@@ -18,4 +18,18 @@ public class RelogioTest {
         assertEquals("00:00:00", relogio.obterHorario());
     }
 
+    @Test
+    public void testMarcarIntervaloTempo() {
+        Relogio relogio = new Relogio();
+
+        // Marcar intervalo de tempo de 5 segundos
+        relogio.programarHorario(10, 0, 0);
+        relogio.marcarInicioIntervalo();
+        // Simular aguardar por 5 segundos (pode variar de acordo com a abordagem)
+        relogio.programarHorario(10, 0, 5);
+        relogio.marcarFimIntervalo();
+
+        assertEquals("00:00:05", relogio.obterHorario());
+    }
+
 }
