@@ -50,6 +50,9 @@ public class Relogio {
         horas = horasDecorridas;
         minutos = minutosDecorridos;
         segundos = segundosDecorridos;
+    }
 
+    public String obterHorarioFormato24h() {
+        return String.format("%02d:%02d:%02d", minutos, horas, segundos);
     }
 }

@@ -32,4 +32,15 @@ public class RelogioTest {
         assertEquals("00:00:05", relogio.obterHorario());
     }
 
+    @Test
+    public void testImprimirHoraFormato24h() {
+        Relogio relogio = new Relogio();
+        relogio.programarHorario(14, 30, 0); // 2:30 PM
+
+        String horaFormato24h = relogio.obterHorarioFormato24h();
+
+        assertEquals("14:30:00", horaFormato24h);
+    }
+
+
 }
