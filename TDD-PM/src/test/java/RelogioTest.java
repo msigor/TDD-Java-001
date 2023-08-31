@@ -42,5 +42,16 @@ public class RelogioTest {
         assertEquals("14:30:00", horaFormato24h);
     }
 
+    @Test
+    public void testAtualizarHorarioPassagemTempo() {
+        Relogio relogio = new Relogio();
+        relogio.programarHorario(12, 0, 0); // Inicializar o relógio para 12:00:00
+
+        // Simular passagem de 1 hora e 30 minutos pelo Sistema Operacional
+        relogio.atualizarHorarioPassagemTempo(1, 30, 0);
+
+        assertEquals("13:30:00", relogio.obterHorario());
+    }
+
 
 }

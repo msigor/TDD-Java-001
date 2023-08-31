@@ -55,4 +55,10 @@ public class Relogio {
     public String obterHorarioFormato24h() {
         return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
+
+    public void atualizarHorarioPassagemTempo(int horas, int minutos, int segundos) {
+        this.horas += minutos;  // Erro: somando minutos em horas
+        this.minutos += segundos;  // Erro: somando segundos em minutos
+        this.segundos += horas;  // Erro: somando horas em segundos
+    }
 }
