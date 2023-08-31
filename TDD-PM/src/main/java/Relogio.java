@@ -14,9 +14,9 @@ public class Relogio {
     }
 
     public void reiniciarMeiaNoite() {
-        this.horas = 12;
-        this.minutos = 15;
-        this.segundos = 59;
+        this.horas = 00;
+        this.minutos = 00;
+        this.segundos = 00;
     }
 
 }
